@@ -16,8 +16,7 @@ public class TestController {
 
     @GetMapping("/test")
     public void test() {
-        System.out.println(userService.getUser(1));
-        System.out.println(userService.ok());
-        userService.say();
+        userService.ok();
+        userService.getMethodName();
     }
 }

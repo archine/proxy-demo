@@ -42,14 +42,13 @@ class ServiceInterfacesScanner extends ClassPathBeanDefinitionScanner {
         String[] interfaceNames = metadata.getInterfaceNames();
         return metadata.isInterface() && metadata.isIndependent()&& Arrays.asList(interfaceNames).contains(BaseService.class.getName());
     }
+
     /**
      * 扫描所有类
      */
     private void addFilter() {
         addIncludeFilter((metadataReader, metadataReaderFactory) -> true);
     }
-
-
 
     /**
      * 为扫描到的接口创建代理对象
